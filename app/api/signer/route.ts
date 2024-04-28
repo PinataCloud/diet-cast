@@ -1,12 +1,5 @@
 import { NextResponse, NextRequest } from "next/server";
-import { PinataFDK } from "pinata-fdk";
-
-const fdk = new PinataFDK({
-  pinata_jwt: process.env.PINATA_JWT as string,
-  pinata_gateway: "",
-  app_fid: "327481",
-  app_mnemonic: process.env.FARCASTER_DEVELOPER_MNEMONIC,
-});
+import { fdk } from "@/config/fdk";
 
 export async function POST() {
   try {
@@ -17,4 +10,3 @@ export async function POST() {
     return NextResponse.json(error);
   }
 }
-

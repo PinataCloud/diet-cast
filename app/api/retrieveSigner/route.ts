@@ -1,17 +1,10 @@
 import { NextResponse, NextRequest } from "next/server";
-import { PinataFDK } from "pinata-fdk";
 import { createAppClient, viemConnector } from "@farcaster/auth-client";
+import { fdk } from "@/config/fdk"
 
 const appClient = createAppClient({
   relay: "https://relay.farcaster.xyz",
   ethereum: viemConnector()
-});
-
-const fdk = new PinataFDK({
-  pinata_jwt: process.env.PINATA_JWT as string,
-  pinata_gateway: "",
-  app_fid: "327481",
-  app_mnemonic: process.env.FARCASTER_DEVELOPER_MNEMONIC,
 });
 
 

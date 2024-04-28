@@ -1,10 +1,5 @@
 import { NextResponse, NextRequest } from "next/server";
-import { PinataFDK, CastResponse } from "pinata-fdk";
-
-const fdk = new PinataFDK({
-  pinata_jwt: process.env.PINATA_JWT as string,
-  pinata_gateway: "",
-});
+import { fdk } from "@/config/fdk"
 
 export async function POST(request: NextRequest) {
   try {
@@ -12,7 +7,7 @@ export async function POST(request: NextRequest) {
     const message = body.castMessage;
     console.log(body)
 
-    const res: CastResponse = await fdk.sendCast({
+    const res = await fdk.sendCast({
       castAddBody: {
         text: message,
       },
