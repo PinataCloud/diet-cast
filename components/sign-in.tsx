@@ -4,7 +4,7 @@ import { QRCode } from "react-qrcode-logo";
 import { Button } from "./ui/button";
 import { SignInButton } from "@farcaster/auth-kit";
 import { CastForm } from "@/components/cast-form";
-import { useEffect, useState, useCallback } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 
 export function SignIn() {

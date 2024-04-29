@@ -1,5 +1,7 @@
 import {  NextResponse } from "next/server";
 
+export const dynamic = 'force-dynamic'
+
 export async function GET() {
   try {
     const feed = await cronFeed("https://warpcast.com/~/channel/pinata", 50);
@@ -15,7 +17,6 @@ async function cronFeed(channel: any, pageSize: any) {
     const result = await fetch(
       `https://api.pinata.cloud/v3/farcaster/casts?channel=${channel}&pageSize=${pageSize}&topLevel=true&reverse=true`,
       {
-        next: { revalidate: 60 },
         method: "GET",
         headers: {
           Authorization: `Bearer ${process.env.PINATA_JWT}`,
