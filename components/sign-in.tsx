@@ -71,7 +71,7 @@ export function SignIn() {
             body: data,
           });
           const signerRes = await signerReq.json();
-          if (signerRes.signers.length > 0) {
+          if (signerRes.signers && signerRes.signers.length > 0) {
             console.log("signer found and set");
             setSignerId(signerRes.signers[0].signer_uuid);
             localStorage.setItem("signer_id", signerRes.signers[0].signer_uuid);
@@ -84,6 +84,11 @@ export function SignIn() {
     } catch (error) {
       console.log(error);
     }
+  }
+
+  async function handleSignInSuccess({ fid, signature, message, nonce } : any){
+    setFid(fid)
+    checkStorage(signature, message, nonce)
   }
 
   useEffect(() => {
@@ -120,13 +125,7 @@ export function SignIn() {
 
       {!fid && !signerId && (
         <SignInButton
-          onSuccess={({ fid, username, signature, message, nonce }) =>
-            console.log(
-              `Hello, ${username}! Your fid is ${fid}.`,
-              setFid(fid),
-              checkStorage(signature, message, nonce),
-            )
-          }
+          onSuccess={handleSignInSuccess}
         />
       )}
     </div>
