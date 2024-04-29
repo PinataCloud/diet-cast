@@ -9,8 +9,8 @@ const fontSans = FontSans({
 });
 
 export const metadata: Metadata = {
-  title: "/pinata Feed",
-  description: "A feed of casts from the /pinata channel on Farcaster",
+  title: "Farcaster Lazy Client",
+  description: "Farcaster clients made easy thanks to Pinata",
   icons: "/favicon.svg",
   openGraph: {
     images: [

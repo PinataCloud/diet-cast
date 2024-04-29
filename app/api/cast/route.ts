@@ -10,6 +10,7 @@ export async function POST(request: NextRequest) {
     const res = await fdk.sendCast({
       castAddBody: {
         text: message,
+        parentUrl: "https://warpcast.com/~/channel/pinata"
       },
       signerId: body.signerId,
     });

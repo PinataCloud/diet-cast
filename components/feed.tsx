@@ -1,6 +1,8 @@
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Embed } from "@/components/embed";
 
+export const dynamic = 'force-dynamic'
+
 async function cronFeed(channel: any, pageSize: any) {
   try {
     const result = await fetch(
