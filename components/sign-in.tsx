@@ -4,7 +4,7 @@ import { QRCode } from "react-qrcode-logo";
 import { Button } from "./ui/button";
 import { SignInButton } from "@farcaster/auth-kit";
 import { CastForm } from "@/components/cast-form";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import Link from "next/link";
 
 export function SignIn() {
@@ -12,7 +12,6 @@ export function SignIn() {
   const [openQR, setOpenQR] = useState(false);
   const [fid, setFid]: any = useState();
   const [signerId, setSignerId]: any = useState();
-  const [signature, setSignature]: any = useState();
 
   async function createSigner() {
     try {
@@ -52,7 +51,7 @@ export function SignIn() {
     }
   }
 
-  async function checkStorage(signature?: any, message?: any) {
+  async function checkStorage(signature?: any, message?: any, nonce?: any) {
     try {
       if (typeof window != "undefined") {
         const signer = localStorage.getItem("signer_id");
@@ -62,6 +61,7 @@ export function SignIn() {
           const data = JSON.stringify({
             message: message,
             signature: signature,
+            nonce: nonce,
           });
           const signerReq = await fetch(`/api/retrieveSigner`, {
             method: "POST",
@@ -120,12 +120,11 @@ export function SignIn() {
 
       {!fid && !signerId && (
         <SignInButton
-          nonce={"photosigner"}
-          onSuccess={({ fid, username, signature, message }) =>
+          onSuccess={({ fid, username, signature, message, nonce }) =>
             console.log(
               `Hello, ${username}! Your fid is ${fid}.`,
               setFid(fid),
-              checkStorage(signature, message),
+              checkStorage(signature, message, nonce),
             )
           }
         />

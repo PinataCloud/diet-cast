@@ -13,8 +13,8 @@ export async function POST(request: NextRequest) {
     const body = await request.json()
     console.log(body.message)
     const { success, fid, error, isError } = await appClient.verifySignInMessage({
-      nonce: "photosigner",
-      domain: "photocaster.xyz",
+      nonce: body.nonce,
+      domain: "lazy-farcaster-client.vercel.app",
       message: body.message,
       signature: body.signature,
     });
