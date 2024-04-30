@@ -45,7 +45,7 @@ export async function Embed({ embedObject }: { embedObject: EmbedObject }) {
     if (result.content === "website") {
       const data = result.res;
       return (
-        <div className="flex flex-col rounded-lg border w-full">
+        <div className="flex flex-col rounded-lg border sm:w-[450px] w-[290px]">
           <Link href={embedObject.url} target="_blank">
             <AspectRatio ratio={16 / 9}>
               <Image
@@ -54,7 +54,7 @@ export async function Embed({ embedObject }: { embedObject: EmbedObject }) {
                   "/photo.svg"
                 }
                 width={400}
-                height={209.5}
+                height={200}
                 alt="Image"
                 className="object-cover rounded-tr rounded-tl w-full max-h-[250px]"
               />
