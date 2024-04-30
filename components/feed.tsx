@@ -3,7 +3,7 @@ import { Embed } from "@/components/embed";
 
 export const dynamic = 'force-dynamic'
 
-async function cronFeed(channel: any, pageSize: any) {
+async function cronFeed(channel: string, pageSize: number) {
   try {
     const result = await fetch(
       `https://api.pinata.cloud/v3/farcaster/casts?channel=${channel}&pageSize=${pageSize}&topLevel=true&reverse=true`,

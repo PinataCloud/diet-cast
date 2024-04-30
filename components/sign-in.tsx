@@ -105,12 +105,7 @@ export function SignIn() {
               <QRCode
                 value={deepLink}
                 size={250}
-                logoImage="https://dweb.mypinata.cloud/ipfs/QmVLwvmGehsrNEvhcCnnsw5RQNseohgEkFNN1848zNzdng"
-                logoWidth={50}
-                logoHeight={50}
-                logoPadding={5}
-                logoPaddingStyle="square"
-                qrStyle="dots"
+                qrStyle="fluid"
                 eyeRadius={15}
               />
               <Link className="w-full" href={deepLink}>

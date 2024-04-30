@@ -28,7 +28,7 @@ const formSchema = z.object({
 });
 
 interface FormProps {
-  signerId: any;
+  signerId: string;
 }
 
 export function CastForm({ signerId }: FormProps) {

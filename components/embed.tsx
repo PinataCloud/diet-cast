@@ -12,7 +12,7 @@ interface EmbedObject {
   };
 }
 
-async function fetchData(url: any) {
+async function fetchData(url: string) {
   let content;
   try {
     const res = await fetch(url);
