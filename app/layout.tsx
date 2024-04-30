@@ -10,6 +10,13 @@ const fontCoke = localFont({
   variable: '--font-coke'
 })
 
+const fontDiet = localFont({
+  src: './assets/cola.ttf',
+  display: 'swap',
+  variable: '--font-diet'
+})
+
+
 const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",
@@ -37,7 +44,7 @@ export default function RootLayout({
       <body
         className={cn(
           "min-h-screen bg-background font-sans antialiased",
-          fontSans.variable, fontCoke.variable
+          fontSans.variable, fontCoke.variable, fontDiet.variable
         )}
       >
         {children}
