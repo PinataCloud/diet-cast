@@ -4,16 +4,22 @@ import { fdk } from "@/config/fdk"
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const message = body.castMessage;
-    console.log(body)
+
+    let castBody: any = {}
+    if(body.fileLink){
+      castBody.text = body.castMessage
+      castBody.embeds = [{ url: body.fileLink }]
+      castBody.parentUrl = "https://warpcast.com/~/channel/diet-coke"
+    } else {
+      castBody.text = body.castMessage
+      castBody.parentUrl = "https://warpcast.com/~/channel/diet-coke"
+    }
 
     const res = await fdk.sendCast({
-      castAddBody: {
-        text: message,
-        parentUrl: "https://warpcast.com/~/channel/pinata"
-      },
-      signerId: body.signerId,
+      castAddBody: castBody,
+      signerId: body.signerId
     });
+
     if (!res.hash) {
       return NextResponse.json(
         { Error: "Failed to send cast" },

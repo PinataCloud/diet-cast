@@ -44,12 +44,6 @@ export async function Embed({ embedObject }: { embedObject: EmbedObject }) {
     }
     if (result.content === "website") {
       const data = result.res;
-      const maxLength = 70;
-      const description = data?.description;
-      const truncatedDescription =
-        description && description.length > maxLength
-          ? `${description.slice(0, maxLength)}...`
-          : description;
       return (
         <div className="flex flex-col rounded-lg border w-full">
           <Link href={embedObject.url} target="_blank">
@@ -62,13 +56,13 @@ export async function Embed({ embedObject }: { embedObject: EmbedObject }) {
                 width={400}
                 height={209.5}
                 alt="Image"
-                className="object-cover rounded-tr rounded-tl w-full"
+                className="object-cover rounded-tr rounded-tl w-full max-h-[250px]"
               />
             </AspectRatio>
             <div className="flex flex-col px-2 pb-2 gap-1">
-              <p className="font-bold">{data?.title}</p>
-              <p className="text-xs">{truncatedDescription}</p>
-              <p className="text-xs">
+              <p className="font-bold truncate">{data?.title}</p>
+              <p className="text-xs truncate">{data?.description}</p>
+              <p className="text-xs truncate">
                 {data?.open_graph.url || embedObject.url}
               </p>
             </div>
