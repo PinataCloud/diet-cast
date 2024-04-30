@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     url: "https://dietcast.xyz",
     siteName: "Diet Cast",
     images: [
-      "https://docs.mypinata.cloud/ipfs/QmYZArEWBaAosWP1XRAB1zLK1kK7zScia4rHbv62xKs3zo?filename=og.png",
+      "https://dweb.mypinata.cloud/ipfs/QmYZArEWBaAosWP1XRAB1zLK1kK7zScia4rHbv62xKs3zo?filename=og.png",
     ],
   },
   icons: {
@@ -44,13 +44,13 @@ export const metadata: Metadata = {
     title: "Diet Cast",
     description: "The only client more lite than /diet-coke",
     images: [
-      "https://docs.mypinata.cloud/ipfs/QmYZArEWBaAosWP1XRAB1zLK1kK7zScia4rHbv62xKs3zo?filename=og.png",
+      "https://dweb.mypinata.cloud/ipfs/QmYZArEWBaAosWP1XRAB1zLK1kK7zScia4rHbv62xKs3zo?filename=og.png",
     ],
   },
   other: {
     "fc:frame": "vNext",
     "fc:frame:image":
-      "https://docs.mypinata.cloud/ipfs/QmYZArEWBaAosWP1XRAB1zLK1kK7zScia4rHbv62xKs3zo?filename=og.png",
+      "https://dweb.mypinata.cloud/ipfs/QmYZArEWBaAosWP1XRAB1zLK1kK7zScia4rHbv62xKs3zo?filename=og.png",
     "fc:frame:button:1": "Visit",
     "fc:frame:button:1:action": "link",
     "fc:frame:button:1:target": "https://dietcast.xyz",
