@@ -23,12 +23,12 @@ const fontSans = FontSans({
 });
 
 export const metadata: Metadata = {
-  title: "Farcaster Lazy Client",
-  description: "Farcaster clients made easy thanks to Pinata",
-  icons: "/favicon.svg",
+  title: "Diet Cast",
+  description: "The only client more lite than /diet-coke",
+  icons: "/favicon.png",
   openGraph: {
     images: [
-      "https://docs.mypinata.cloud/ipfs/bafybeibj3a47gxdgkjfrfs6b2n3prsjbvk2lx3twp4lfahgcrfddkxukwu?filename=og.png",
+      "https://docs.mypinata.cloud/ipfs/QmYZArEWBaAosWP1XRAB1zLK1kK7zScia4rHbv62xKs3zo?filename=og.png",
     ],
   },
 };
