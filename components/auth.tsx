@@ -9,8 +9,8 @@ import { SignIn } from "@/components/sign-in";
 
 const config = {
   rpcUrl: "https://mainnet.optimism.io",
-  domain: "diet-cast.vercel.app",
-  siweUri: "https://diet-cast.vercel.app/api/retrieveSigner",
+  domain: "www.dietcast.xyz",
+  siweUri: "https://www.dietcast.xyz/api/retrieveSigner",
 };
 
 export function Auth() {
