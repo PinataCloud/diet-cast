@@ -1,7 +1,7 @@
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Embed } from "@/components/embed";
 
-export const dynamic = 'force-dynamic'
+//export const dynamic = 'force-dynamic'
 
 async function cronFeed(channel: any, pageSize: any) {
   try {
@@ -27,7 +27,7 @@ async function cronFeed(channel: any, pageSize: any) {
 }
 
 export async function Feed() {
-  const feed = await cronFeed("https://warpcast.com/~/channel/pinata", 50);
+  const feed = await cronFeed("https://warpcast.com/~/channel/diet-coke", 50);
 
   return (
     <>
