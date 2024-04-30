@@ -11,7 +11,7 @@ const fontCoke = localFont({
 })
 
 const fontDiet = localFont({
-  src: './assets/cola.ttf',
+  src: './assets/lokicola.ttf',
   display: 'swap',
   variable: '--font-diet'
 })
