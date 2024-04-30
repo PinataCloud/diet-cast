@@ -14,7 +14,7 @@ export async function POST(request: NextRequest) {
     console.log(body.message)
     const { success, fid, error, isError } = await appClient.verifySignInMessage({
       nonce: body.nonce,
-      domain: "farcaster-lazy-client.vercel.app",
+      domain: "diet-cast.vercel.app",
       message: body.message,
       signature: body.signature,
     });
