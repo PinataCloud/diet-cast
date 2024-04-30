@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     "fc:frame:button:1:target": "https://dietcast.xyz",
     "fc:frame:button:2": "Tutorial",
     "fc:frame:button:2:action": "link",
-    "fc:frame:button:2:target": "https://pinata.cloud/blog",
+    "fc:frame:button:2:target": "https://www.pinata.cloud/blog/how-to-build-a-lite-client-with-the-pinata-farcaster-api",
     "fc:frame:button:3": "Repo",
     "fc:frame:button:3:action": "link",
     "fc:frame:button:3:target": "https://github.com/PinataCloud/diet-cast",
