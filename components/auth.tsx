@@ -9,8 +9,8 @@ import { SignIn } from "@/components/sign-in";
 
 const config = {
   rpcUrl: "https://mainnet.optimism.io",
-  domain: "farcaster-lazy-client.vercel.app",
-  siweUri: "https://farcaster-lazy-client.vercel.app/api/retrieveSigner",
+  domain: "diet-cast.vercel.app",
+  siweUri: "https://diet-cast.vercel.app/api/retrieveSigner",
 };
 
 export function Auth() {
