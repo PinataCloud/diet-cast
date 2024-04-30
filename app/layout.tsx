@@ -22,15 +22,6 @@ const fontSans = FontSans({
   variable: "--font-sans",
 });
 
-const frameData = fdk.getFrameMetadata({
-  cid: "QmYZArEWBaAosWP1XRAB1zLK1kK7zScia4rHbv62xKs3zo",
-  buttons: [
-    { label: 'Visit', action: 'link', target: 'https://dietcast.xyz' },
-    { label: 'Tutorial', action: 'link', target: 'https://pinata.cloud/blog' },
-    { label: 'Repo', action: 'link', target: 'https://github.com/PinataCloud/diet-cast' },
-  ]
-})
-
 export const metadata: Metadata = {
   title: "Diet Cast",
   description: "The only client more lite than /diet-coke",
@@ -56,8 +47,7 @@ export const metadata: Metadata = {
       "https://docs.mypinata.cloud/ipfs/QmYZArEWBaAosWP1XRAB1zLK1kK7zScia4rHbv62xKs3zo?filename=og.png",
     ],
   },
-  other: { frameData }
-  /* other: {
+  other: {
     "fc:frame": "vNext",
     "fc:frame:image":
       "https://docs.mypinata.cloud/ipfs/QmYZArEWBaAosWP1XRAB1zLK1kK7zScia4rHbv62xKs3zo?filename=og.png",
@@ -70,7 +60,7 @@ export const metadata: Metadata = {
     "fc:frame:button:3": "Repo",
     "fc:frame:button:3:action": "link",
     "fc:frame:button:3:target": "https://github.com/PinataCloud/diet-cast",
-  }, */
+  },
 };
 
 export default function RootLayout({
