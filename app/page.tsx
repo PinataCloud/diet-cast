@@ -3,6 +3,7 @@ import "./globals.css";
 import { Separator } from "@/components/ui/separator";
 import "@farcaster/auth-kit/styles.css";
 import { Auth } from "@/components/auth";
+import Image from "next/image"
 
 export default async function Home() {
   return (
@@ -15,6 +16,7 @@ export default async function Home() {
       <Auth />
       <Separator className="sm:w-[500px] w-sm" />
       <Feed />
+        <Image src="https://dweb.mypinata.cloud/ipfs/QmRnrZHMHacn4ctBx67JkHpwL2i5Xc9335mJoVVdimnfjj" width={150} height={100} alt="logo" />
     </main>
   );
 }
