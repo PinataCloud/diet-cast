@@ -1,38 +1,41 @@
-README will be updated soon! 
+# DietCast.xyz - A Farcaster Lite Client
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+DietCast is a lite client for Farcaster that includes a channel feed, auth, and sending casts thanks to the Pinata [Farcaster API](https://docs.pinata.cloud/farcaster/farcaster-api/getting-started) and [Auth](https://docs.pinata.cloud/farcaster/farcaster-auth). To learn more how it works check out the blog post [here](https://www.pinata.cloud/blog/how-to-build-a-lite-client-with-the-pinata-farcaster-api)
+
+This client uses the following tech stacks and packages:
+
+- Next.js 14 App Router w/ Tailwind
+- [shadcn/ui](https://ui.shadcn.com/)
+- [Farcaster Auth-Kit](https://github.com/farcasterxyz/auth-monorepo)
+- [Pinata FDK](https://github.com/PinataCloud/pinata-fdk)
 
 ## Getting Started
 
-First, run the development server:
+Clone the repo and `cd` into it, then run `npm install`
+
+Then open the `.env.sample` file and fill in your own variables.
+
+```
+# The JWT provided when creating a Pinata API key
+PINATA_JWT=
+# The mnemonic phrase for your Farcaster App account, e.g. "taco salsa burgers fries..."
+DEVELOPER_MNEMONIC=""
+# The FID for your Farcaster App account
+DEVELOPER_FID=
+```
+
+After replacing with your own variables change the name of the file to `.env.local`. Now run the development server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
 ## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+Pinata is the best choice for Farcaster and IPFS at scale, check out some of our other resources!
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- [Pinata Farcaster Channel](https://warpcast.com/~/channel/pinata)
+- [Docs](https://docs.pinata.cloud)
+- [Blog/Tutorials](https://pinata.cloud/blog)
