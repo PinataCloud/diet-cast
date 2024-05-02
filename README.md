@@ -30,6 +30,8 @@ export default siteMeta;
 
 Then open the `.env.sample` file and fill in your own variables.
 
+#### ℹ️ If you want to enable auth and sending cats you will need a paid [Pinata account](https://pinata.cloud/pricing)
+
 ```
 # The JWT provided when creating a Pinata API key
 PINATA_JWT=
