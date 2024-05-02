@@ -22,7 +22,10 @@ const siteMeta = {
   domain: "www.dietcast.xyz", // Website domain
   websiteUrl: "https://www.dietcast.xyz", // Full website url
   channelUrl: "https://warpcast.com/~/channel/diet-coke", // URL for the farcaster channel
-  logo: "/logo.svg" // Location of the logo in the public folder
+  logo: "/logo.svg", // Location of the logo in the public folder
+  ogImage: "/og.png", // Image used for the opengraph preview
+  favicon: "/favicon.png" // Icon used for tab previews
+
 };
 
 export default siteMeta;

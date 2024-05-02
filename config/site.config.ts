@@ -4,7 +4,9 @@ const siteMeta = {
   domain: "www.dietcast.xyz",
   websiteUrl: "https://www.dietcast.xyz",
   channelUrl: "https://warpcast.com/~/channel/diet-coke",
-  logo: "/logo.svg"
+  logo: "/logo.svg", 
+  ogImage: "/og.png",
+  favicon: "/favicon.png"
 };
 
 export default siteMeta;

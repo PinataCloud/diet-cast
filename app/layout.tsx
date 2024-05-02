@@ -18,20 +18,20 @@ export const metadata: Metadata = {
     url: siteMeta.websiteUrl,
     siteName: siteMeta.title,
     images: [
-      "https://dweb.mypinata.cloud/ipfs/QmYZArEWBaAosWP1XRAB1zLK1kK7zScia4rHbv62xKs3zo?filename=og.png",
+      siteMeta.ogImage,
     ],
   },
   icons: {
-    icon: "/favicon.png",
-    shortcut: "/favicon.png",
-    apple: "/favicon.png",
+    icon: siteMeta.favicon,
+    shortcut: siteMeta.favicon,
+    apple: siteMeta.favicon,
   },
   twitter: {
     card: "summary_large_image",
     title: siteMeta.title,
     description: siteMeta.description,
     images: [
-      "https://dweb.mypinata.cloud/ipfs/QmYZArEWBaAosWP1XRAB1zLK1kK7zScia4rHbv62xKs3zo?filename=og.png",
+      siteMeta.ogImage,
     ],
   },
   other: {
