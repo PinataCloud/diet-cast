@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     url: siteMeta.websiteUrl,
     siteName: siteMeta.title,
     images: [
-      `${siteMeta.websiteUrl}/${siteMeta.ogImage}`,
+      `${siteMeta.websiteUrl + siteMeta.ogImage}`,
     ],
   },
   icons: {
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     title: siteMeta.title,
     description: siteMeta.description,
     images: [
-      `${siteMeta.websiteUrl}/${siteMeta.ogImage}`,
+      `${siteMeta.websiteUrl + siteMeta.ogImage}`,
     ],
   },
   other: {
