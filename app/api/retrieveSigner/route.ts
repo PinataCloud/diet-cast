@@ -1,6 +1,7 @@
 import { NextResponse, NextRequest } from "next/server";
 import { createAppClient, viemConnector } from "@farcaster/auth-client";
 import { fdk } from "@/config/fdk"
+import siteMeta from "@/config/site.config";
 
 const appClient = createAppClient({
   relay: "https://relay.farcaster.xyz",
@@ -14,7 +15,7 @@ export async function POST(request: NextRequest) {
     console.log(body.message)
     const { success, fid, error, isError } = await appClient.verifySignInMessage({
       nonce: body.nonce,
-      domain: "www.dietcast.xyz",
+      domain: siteMeta.domain,
       message: body.message,
       signature: body.signature,
     });

@@ -13,6 +13,21 @@ This client uses the following tech stacks and packages:
 
 Clone the repo and `cd` into it, then run `npm install`
 
+For an instant channel lite client, edit the `config/site.config.ts` file with your own information.
+
+```typescript
+const siteMeta = {
+	title: "Diet Cast", // Name of the website
+	description: "The only client more lite than /diet-coke", // Website description
+  domain: "www.dietcast.xyz", // Website domain
+  websiteUrl: "https://www.dietcast.xyz", // Full website url
+  channelUrl: "https://warpcast.com/~/channel/diet-coke", // URL for the farcaster channel
+  logo: "/logo.svg" // Location of the logo in the public folder
+};
+
+export default siteMeta;
+```
+
 Then open the `.env.sample` file and fill in your own variables.
 
 ```
