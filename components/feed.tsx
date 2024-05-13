@@ -6,7 +6,7 @@ export const dynamic = 'force-dynamic'
 async function cronFeed(channel: string, pageSize: number) {
   try {
     const result = await fetch(
-      `https://api.pinata.cloud/v3/farcaster/casts?channel=${channel}&pageSize=${pageSize}&topLevel=true&reverse=true`,
+      `https://api.pinata.cloud/v3/farcaster/casts?channel=${channel}&pageSize=${pageSize}`,
       {
         next: { revalidate: 60 },
         method: "GET",
@@ -27,11 +27,11 @@ async function cronFeed(channel: string, pageSize: number) {
 }
 
 export async function Feed() {
-  const feed = await cronFeed("https://warpcast.com/~/channel/diet-coke", 50);
+  const feed = await cronFeed("diet-coke", 50);
 
   return (
     <>
-      {feed.data.casts.map((cast: any) => (
+      {feed.casts.map((cast: any) => (
         <div
           className="flex gap-4 sm:w-[500px] w-[350px] flex-row items-start"
           key={cast.hash}
@@ -45,7 +45,7 @@ export async function Feed() {
               <p className="font-bold">{cast.author.display_name}</p>
               <p className="text-gray-600">@{cast.author.username}</p>
             </div>
-            <p className="pb-2">{cast.content.replace(/https?:\/\/\S+/i, '')}</p>
+            <p className="pb-2">{cast.text.replace(/https?:\/\/\S+/i, '')}</p>
             {cast.embeds &&
               cast.embeds.length > 0 ? (
               <Embed embedObject={cast.embeds[0]} />
