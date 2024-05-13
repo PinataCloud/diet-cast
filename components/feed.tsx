@@ -1,5 +1,6 @@
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Embed } from "@/components/embed";
+import siteMeta from "@/config/site.config";
 
 export const dynamic = 'force-dynamic'
 
@@ -27,7 +28,7 @@ async function cronFeed(channel: string, pageSize: number) {
 }
 
 export async function Feed() {
-  const feed = await cronFeed("diet-coke", 50);
+  const feed = await cronFeed(siteMeta.channelUrl, 50);
 
   return (
     <>
