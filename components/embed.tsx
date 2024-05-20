@@ -6,7 +6,7 @@ import { AvatarImage, Avatar, AvatarFallback } from "./ui/avatar";
 
 interface EmbedObject {
   url?: string;
-  castId?: {
+  cast_id?: {
     fid: number;
     hash: string;
   };
@@ -83,7 +83,7 @@ export async function Embed({ embedObject }: { embedObject: EmbedObject }) {
     }
   } else {
     const castReq = await fetch(
-      `https://api.pinata.cloud/v3/farcaster/casts/${embedObject.castId?.hash}`,
+      `https://api.pinata.cloud/v3/farcaster/casts/${embedObject.cast_id?.hash}`,
       {
         method: "GET",
         headers: {
@@ -92,7 +92,7 @@ export async function Embed({ embedObject }: { embedObject: EmbedObject }) {
       },
     );
     const castData = await castReq.json();
-    const cast = castData.data;
+    const cast = castData.cast;
     console.log(cast);
 
     return (
@@ -110,7 +110,7 @@ export async function Embed({ embedObject }: { embedObject: EmbedObject }) {
               <p className="font-bold">{cast.author.display_name}</p>
               <p className="text-gray-600">@{cast.author.username}</p>
             </div>
-            <p className="pb-2">{cast.content.replace(/https?:\/\/\S+/i, "")}</p>
+            <p className="pb-2">{cast.text.replace(/https?:\/\/\S+/i, "")}</p>
           </div>
         </div>
       </Link>
