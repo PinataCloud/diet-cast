@@ -2,7 +2,7 @@ import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Embed } from "@/components/embed";
 import siteMeta from "@/config/site.config";
 
-export const dynamic = 'force-dynamic'
+export const dynamic = "force-dynamic";
 
 async function cronFeed(channel: string, pageSize: number) {
   try {
@@ -28,7 +28,7 @@ async function cronFeed(channel: string, pageSize: number) {
 }
 
 export async function Feed() {
-  const feed = await cronFeed(siteMeta.channelUrl, 50);
+  const feed = await cronFeed(siteMeta.channelName, 50);
 
   return (
     <>
@@ -46,14 +46,13 @@ export async function Feed() {
               <p className="font-bold">{cast.author.display_name}</p>
               <p className="text-gray-600">@{cast.author.username}</p>
             </div>
-            <p className="pb-2">{cast.text.replace(/https?:\/\/\S+/i, '')}</p>
-            {cast.embeds &&
-              cast.embeds.length > 0 ? (
+            <p className="pb-2">{cast.text.replace(/https?:\/\/\S+/i, "")}</p>
+            {cast.embeds && cast.embeds.length > 0 ? (
               <Embed embedObject={cast.embeds[0]} />
             ) : null}
           </div>
         </div>
       ))}
-      </>
+    </>
   );
 }
