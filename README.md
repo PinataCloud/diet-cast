@@ -21,7 +21,7 @@ const siteMeta = {
 	description: "The only client more lite than /diet-coke", // Website description
   domain: "www.dietcast.xyz", // Website domain
   websiteUrl: "https://www.dietcast.xyz", // Full website url
-  channelUrl: "https://warpcast.com/~/channel/diet-coke", // URL for the farcaster channel
+  channelUrl: "diet-coke", // Name of the channel including hyphons
   logo: "/logo.svg", // Location of the logo in the public folder
   ogImage: "/og.png", // Image used for the opengraph preview
   favicon: "/favicon.png" // Icon used for tab previews
